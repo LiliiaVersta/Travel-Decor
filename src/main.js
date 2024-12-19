@@ -1,0 +1,4 @@
+import './js/faq';
+import './js/gallery';
+import './js/header';
+import './js/player-reviews';
