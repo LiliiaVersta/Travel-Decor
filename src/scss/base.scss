@@ -1,1 +1,42 @@
+body {
+  font-family: 'Roboto', sans-serif;
+  background-color: $_main-cobalt-color;
+  color: $_main-cobalt-color;
+  font-style: normal;
+  font-weight: 400;
 
+  @include media(mobile) {
+    @include font(15, 22);
+  }
+
+  @include media(desktop) {
+    @include font(18, 27);
+  }
+}
+
+h2 {
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 700;
+
+  @include media(mobile) {
+    @include font(24, 32);
+  }
+
+  @include media(desktop) {
+    @include font(32, 48);
+  }
+}
+
+.container {
+  margin: 0 auto;
+
+  @include media(mobile) {
+    max-width: $mobile;
+    padding: 0 16px;
+  }
+
+  @include media(desktop) {
+    max-width: $desktop;
+    padding: 0 60px;
+  }
+}
