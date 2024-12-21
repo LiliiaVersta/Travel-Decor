@@ -1,0 +1,54 @@
+.game-description-section {
+  padding-top: 24px;
+  background-color: $_peach_bg_color;
+
+  @include media(desktop) {
+    padding-top: 80px;
+  }
+
+  &__container {
+    @include media(mobile) {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      gap: 16px;
+    }
+  }
+
+  &__title {
+    text-align: center;
+    @include media(desktop) {
+      margin-bottom: 33px;
+    }
+  }
+
+  &__text-container {
+    display: flex;
+
+    @include media(mobile) {
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      gap: 16px;
+    }
+    @include media(desktop) {
+      flex-direction: row;
+      gap: 32px;
+      margin-bottom: 3px;
+    }
+  }
+
+  &__text {
+    text-align: center;
+    @include media(desktop) {
+      width: 339px;
+    }
+  }
+
+  &__icon {
+    @include media(desktop) {
+      width: 352px;
+    }
+  }
+}

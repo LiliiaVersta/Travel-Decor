@@ -1,0 +1,161 @@
+.header {
+  width: 100%;
+  z-index: 99;
+
+  &__container {
+    display: flex;
+    align-items: center;
+
+    @include media(mobile) {
+      justify-content: space-between;
+      gap: 8px;
+    }
+
+    @include media(desktop) {
+      position: sticky;
+      justify-content: start;
+      gap: 40px;
+      padding-top: 7px;
+      padding-bottom: 7px;
+    }
+  }
+
+  &__logo img {
+    width: 92px;
+    height: 64px;
+
+    @include media(desktop) {
+      width: 120px;
+      height: 77px;
+    }
+  }
+
+  &__burger {
+    @include media(mobile) {
+      width: 32px;
+      height: 32px;
+      padding: 0;
+      border: none;
+      background-color: transparent;
+      cursor: pointer;
+    }
+
+    &__icon {
+      fill: $_sin_text_color;
+    }
+
+    @include media(desktop) {
+      display: none;
+    }
+  }
+
+  &__nav {
+    @include media(mobile) {
+      display: none;
+    }
+  }
+  &__nav {
+    @include media(desktop) {
+      display: flex;
+    }
+  }
+
+  &__menu {
+    @include media(mobile) {
+      display: none;
+    }
+
+    @include media(desktop) {
+      display: flex;
+      gap: 37px;
+    }
+  }
+
+  &__menu-link {
+    @include media(mobile) {
+      display: none;
+    }
+
+    @include media(desktop) {
+      display: block;
+      padding-top: 10px;
+      padding-bottom: 10px;
+      font-weight: 600;
+      color: $_sin_text_color;
+      transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+      &:hover {
+        color: #db9c09;
+      }
+      &:active {
+        color: $_white_color;
+      }
+    }
+  }
+}
+
+.mobile-menu {
+  @include media(desktop) {
+    display: none;
+  }
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 9999;
+  width: 100%;
+  height: 100%;
+  padding: 24px 16px;
+  overflow-x: hidden;
+  overflow-y: auto;
+  background-color: $_main_cobalt_color;
+  transform: translateX(100%);
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+  &.is-open {
+    transform: translateX(0);
+  }
+
+  &__btn-close {
+    position: absolute;
+    top: 16px;
+    right: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    fill: transparent;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+  }
+
+  .btn-close__icon {
+    fill: $_sin_text_color;
+  }
+
+  &__list {
+    margin-top: 38px;
+    display: flex;
+    flex-direction: column;
+    gap: 28px;
+  }
+
+  &__link {
+    display: block;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 10px;
+    font-weight: 600;
+    color: $_sin_text_color;
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+    @include font(18, 27);
+
+    &:active {
+      border: none;
+      border-radius: 20px;
+      background-color: rgba(255, 180, 5, 0.7);
+      color: $_white_color;
+    }
+  }
+}

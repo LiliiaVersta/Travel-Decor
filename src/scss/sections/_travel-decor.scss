@@ -1,0 +1,106 @@
+.hero-section {
+  padding-top: 16px;
+  padding-bottom: 24px;
+
+  @include media(desktop) {
+    padding-top: 40px;
+    padding-bottom: 80px;
+  }
+
+  &__container {
+    @include media(desktop) {
+      display: flex;
+      flex-direction: row-reverse;
+      justify-content: space-between;
+      align-items: center;
+      gap: 32px;
+    }
+  }
+
+  &__image-container {
+    @include media(mobile) {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-bottom: 16px;
+    }
+  }
+
+  &__image {
+    @include media(desktop) {
+      width: 523px;
+      height: 430px;
+    }
+  }
+
+  &__title-container {
+    display: flex;
+    gap: 3px;
+    align-items: center;
+    justify-content: start;
+    @include media(mobile) {
+      margin-bottom: 10px;
+    }
+    @include media(desktop) {
+      gap: 22px;
+      margin-bottom: 16px;
+    }
+  }
+
+  &__title {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 700;
+    color: $_sin_text_color;
+    @include font(36, 54);
+
+    @include media(desktop) {
+      @include font(60, 90);
+    }
+  }
+
+  &__title-icon {
+    width: 32px;
+    height: 32px;
+    transform: rotate(26deg);
+    fill: $_sin_text_color;
+
+    @include media(desktop) {
+      width: 54px;
+      height: 54px;
+    }
+  }
+
+  &__description-container {
+    margin-bottom: 24px;
+
+    @include media(mobile) {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+  }
+  &__description {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 700;
+    color: $_white_color;
+    @include font(20, 30);
+
+    @include media(desktop) {
+      @include font(32, 48);
+    }
+  }
+
+  &__link {
+    display: block;
+  }
+
+  &__badge-icon {
+    width: 179px;
+    height: 54px;
+
+    @include media(desktop) {
+      width: 293px;
+      height: 85px;
+    }
+  }
+}
