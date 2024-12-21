@@ -1,0 +1,110 @@
+.gallery-section {
+  background: var(--Peach, #ffe5b2);
+  padding: 40px 20px;
+
+  .gallery-title {
+    color: var(--Smalt, #12338d);
+    font-family: 'Open Sans', sans-serif;
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 150%; /* 48px */
+    text-align: center;
+    margin-bottom: 20px;
+  }
+
+  .gallery-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px; /* Расстояние между слайдами */
+    flex-wrap: wrap; /* Слайды переходят на следующую строку на мобильных */
+  }
+
+  .gallery-slide {
+    img {
+      width: 246px;
+      height: 529px;
+      flex-shrink: 0;
+      border-radius: 20px;
+      object-fit: cover; /* Картинка адаптируется без искажений */
+    }
+  }
+
+  .pagination {
+    display: flex;
+    justify-content: center;
+    gap: 15px; /* Расстояние между кнопками */
+    margin-top: 20px;
+
+    .pagination-button {
+      width: 32px;
+      height: 32px;
+      flex-shrink: 0;
+      border-radius: 50px;
+      background-color: #ffb405;
+      border: none;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+
+      &:hover {
+        background-color: darken(#ffb405, 10%); /* Затемнение при наведении */
+      }
+
+      .pagination-icon {
+        width: 16px; /* Размер стрелки внутри */
+        height: 16px;
+        fill: #ffffff; /* Цвет стрелки */
+      }
+    }
+  }
+
+  /* Адаптивность для десктопа (1200px) */
+  @media (min-width: 1200px) {
+    .gallery-container {
+      gap: 30px; /* Увеличение расстояния между слайдами */
+    }
+
+    .gallery-slide img {
+      width: 300px;
+      height: 600px; /* Больше размеры для больших экранов */
+    }
+
+    .pagination-button {
+      width: 40px;
+      height: 40px;
+    }
+
+    .pagination-icon {
+      width: 20px;
+      height: 20px;
+    }
+  }
+
+  /* Адаптивность для мобильных (320px) */
+  @media (max-width: 320px) {
+    .gallery-title {
+      color: #ffb405;
+    }
+    .gallery-container {
+      flex-direction: column; /* Слайды располагаются в столбик */
+      align-items: center; /* Центровка слайдов */
+    }
+
+    .gallery-slide img {
+      width: 200px;
+      height: auto; /* Высота подстраивается автоматически */
+    }
+
+    .pagination-button {
+      width: 28px;
+      height: 28px;
+    }
+
+    .pagination-icon {
+      width: 14px;
+      height: 14px;
+    }
+  }
+}
