@@ -4,12 +4,142 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Page 3</title>
+    <link rel="stylesheet" href="./scss/styles.scss" />
+    <title>Terms & Conditions</title>
   </head>
-  <body>
-    <section>
-      <a href="./index.html">Back to Home</a>
-      <h1>Terms & Conditions</h1>
-    </section>
+  <body class="terms-body">
+    <header class="header">
+      <div class="container">
+        <div class="header__container">
+          <a class="header__logo" href="./index.html">
+            <img src="./img/header/logo.svg" alt="Logo" />
+          </a>
+
+          <!-- Mobile burger -->
+          <button class="header__burger menu-btn-open" type="button">
+            <svg class="icon-term" width="32" height="32">
+              <use href="./img/sprite.svg#icon-menu"></use>
+            </svg>
+          </button>
+
+          <!-- Mobile version -->
+          <div class="mobile-menu">
+            <button class="mobile-menu__btn-close menu-btn-close" type="button">
+              <svg class="btn-close__icon" width="32" height="32">
+                <use href="./img/sprite.svg#icon-x"></use>
+              </svg>
+            </button>
+            <ul class="mobile-menu__list">
+              <li>
+                <a class="mobile-menu__link" href="#hero-section">Home</a>
+              </li>
+              <li>
+                <a class="mobile-menu__link" href="#game-description-section"
+                  >Game Description</a
+                >
+              </li>
+              <li>
+                <a class="mobile-menu__link" href="#reviews-section">Reviews</a>
+              </li>
+              <li>
+                <a class="mobile-menu__link" href="#how-to-play-section"
+                  >How to Play</a
+                >
+              </li>
+              <li>
+                <a class="mobile-menu__link" href="">Features</a>
+              </li>
+              <li>
+                <a class="mobile-menu__link" href="">FAQ</a>
+              </li>
+              <li>
+                <a class="mobile-menu__link" href="">Gallery</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </header>
+    <main>
+      <section class="terms-section">
+        <div class="container">
+          <a class="terms-section__link" href="./index.html">
+            <svg class="terms-section__icon" width="24" height="24">
+              <use href="./img/sprite.svg#icon-home"></use>
+            </svg>
+            Back to Home
+          </a>
+          <h1 class="terms-section__main-title">Terms & Conditions</h1>
+          <p class="terms-section__text">
+            These Terms & Conditions apply to the
+            <span class="bold">Travel Decor</span> app (hereinafter referred to
+            as "Application") for mobile devices, created by
+            <span class="bold">QuestHub Joy Pro</span> (hereinafter referred to
+            as "Service Provider") as a free service.
+          </p>
+          <h2 class="terms-section__title">Acceptance of Terms</h2>
+          <p class="terms-section__text">
+            By downloading or using the Application, you agree to comply with
+            these terms. Unauthorized copying, modification, or reverse
+            engineering of the Application is strictly prohibited. All
+            intellectual property rights remain the sole property of the Service
+            Provider.
+          </p>
+          <h2 class="terms-section__title">Application Usage</h2>
+          <p class="terms-section__text">
+            The Service Provider endeavors to ensure the Application is
+            functional and up-to-date. However, they reserve the right to modify
+            or discontinue the Application at any time. Charges for services, if
+            any, will be transparently communicated.
+          </p>
+          <h2 class="terms-section__title">Third-Party Services</h2>
+          <p class="terms-section__paragraph">
+            The Application incorporates third-party services, which are
+            governed by their respective terms:
+          </p>
+          <ul class="terms-section__list">
+            <li>Google Play Services</li>
+            <li>Google Analytics for Firebase</li>
+            <li>
+              <a
+                class="terms-section__link"
+                href="https://www.facebook.com/legal/terms"
+                target="_blank"
+                >Facebook</a
+              >
+            </li>
+          </ul>
+          <h2 class="terms-section__title">Responsibility and Liability</h2>
+          <p class="terms-section__text">
+            Users are responsible for ensuring their device is adequately
+            powered, secure, and compatible with the Application. The Service
+            Provider is not liable for disruptions due to lack of internet
+            access, device issues, or third-party services
+          </p>
+          <h2 class="terms-section__title">Updates</h2>
+          <p class="terms-section__text">
+            The Application may require updates to maintain functionality. Users
+            are expected to download these updates when available. The Service
+            Provider may terminate the Application without prior notice; upon
+            termination, users must cease use and delete the Application from
+            their devices.
+          </p>
+          <h2 class="terms-section__title">Changes to Terms</h2>
+          <p class="terms-section__paragraph">
+            These Terms & Conditions may be updated periodically. Continued use
+            implies acceptance of updated terms.
+          </p>
+          <p class="terms-section__paragraph">Effective Date: 2024-11-21</p>
+          <p class="terms-section__contact bold">Contact Us</p>
+          <p class="terms-section__contact">
+            For questions regarding these Terms & Conditions, please contact
+            <span class="bold">support@questhubjoypro.com.</span>
+          </p>
+        </div>
+      </section>
+    </main>
+    <footer></footer>
+
+    <script type="module" src="./js/header.js"></script>
   </body>
 </html>
