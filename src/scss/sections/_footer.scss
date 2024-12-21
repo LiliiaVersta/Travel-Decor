@@ -1,0 +1,130 @@
+.footer-section {
+  background: var(--Peach, #ffe5b2); /* Бежевый фон всего футера */
+  position: relative;
+
+  padding: 0 233px;
+
+  /* Темно-синий полукруг */
+  &::before {
+    content: '';
+    display: block;
+    background: var(--Cobalt, #21429f);
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 150px; /* Высота темно-синей части */
+    border-radius: 100% 100% 0 0; /* Полукруглый верх */
+  }
+
+  .footer-container {
+    position: relative; /* Для того чтобы контент оставался поверх псевдоэлемента */
+    display: flex;
+    flex-direction: column; /* Элементы друг под другом */
+    align-items: center; /* Центровка по горизонтали */
+    gap: 20px; /* Расстояние между кнопкой и текстом */
+    padding: 40px 20px;
+
+    /* Кнопка Google Play */
+    .google-play-link {
+      img {
+        width: 299px; /* Ширина кнопки */
+        height: 86px; /* Высота кнопки */
+        display: block;
+      }
+    }
+
+    /* Текстовые ссылки */
+    .footer-text {
+      text-align: center;
+
+      p {
+        margin: 0;
+        font-size: 14px; /* Размер текста */
+        line-height: 1.5;
+
+        .footer-link {
+          color: var(--My-Sin, #ffb405); /* Желтый цвет ссылок */
+          text-decoration: none;
+          font-size: 18px;
+          font-style: normal;
+          font-weight: 600;
+          line-height: 150%; /* 27px */
+          text-decoration-line: underline;
+          text-decoration-style: solid;
+          text-decoration-skip-ink: auto;
+          text-decoration-thickness: auto;
+          text-underline-offset: auto;
+          text-underline-position: from-font;
+
+          &:hover {
+            text-decoration: underline; /* Подчеркивание при наведении */
+          }
+        }
+
+        .divider {
+          color: var(--My-Sin, #ffb405);
+          height: 27px;
+          margin: 0 5px; /* Отступы для разделителя */
+        }
+      }
+
+      .copyright {
+        color: var(--My-Sin, #ffb405);
+        font-size: 18px; /* Размер копирайта */
+      }
+    }
+  }
+
+  /* Десктопная версия (ширина >= 1200px) */
+  @media (min-width: 1200px) {
+    .footer-container {
+      flex-direction: row; /* Горизонтальное расположение элементов */
+      justify-content: space-between; /* Распределение по краям */
+      align-items: center; /* Центровка по вертикали */
+
+      .google-play-link {
+        img {
+          width: 200px;
+          height: 86px; /* Оставляем фиксированные размеры */
+        }
+      }
+
+      .footer-text {
+        text-align: center; /* Текст выравнивается справа */
+      }
+    }
+  }
+
+  /* Мобильная версия (ширина <= 320px) */
+  @media (max-width: 320px) {
+    .footer-container {
+      flex-direction: column; /* Элементы друг под другом */
+      align-items: center;
+
+      .google-play-link {
+        margin-bottom: 20px; /* Отступ под кнопкой */
+        img {
+          width: 250px; /* Уменьшаем ширину кнопки */
+          height: auto;
+        }
+      }
+
+      .footer-text {
+        text-align: center;
+
+        p {
+          font-size: 12px; /* Уменьшенный текст */
+        }
+
+        .footer-link {
+          font-size: 10px;
+        }
+
+        .copyright {
+          font-size: 12px;
+        }
+      }
+    }
+  }
+}
