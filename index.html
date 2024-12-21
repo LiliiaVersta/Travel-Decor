@@ -17,17 +17,282 @@
     <script type="module" crossorigin src="/Travel-Decor/commonHelpers.js"></script>
     <link rel="modulepreload" crossorigin href="/Travel-Decor/assets/vendor-8f98089f.js">
     <link rel="stylesheet" href="/Travel-Decor/assets/vendor-8255b786.css">
-    <link rel="stylesheet" href="/Travel-Decor/assets/index-00b9e457.css">
+    <link rel="stylesheet" href="/Travel-Decor/assets/index-39730983.css">
   </head>
   <body>
-    <header class="header"></header>
+    <header class="header">
+  <div class="container">
+    <div class="header__container">
+      <a class="header__logo" href="../index.html">
+        <img src="../img/header/logo.svg" alt="Logo" />
+      </a>
+
+      <!-- Mobile burger -->
+      <button class="header__burger menu-btn-open" type="button">
+        <svg class="header__burger__icon" width="32" height="32">
+          <use href="/Travel-Decor/assets/sprite-a6d3000c.svg#icon-menu"></use>
+        </svg>
+      </button>
+
+      <!-- Mobile version -->
+      <div class="mobile-menu">
+        <button class="mobile-menu__btn-close menu-btn-close" type="button">
+          <svg class="btn-close__icon" width="32" height="32">
+            <use href="/Travel-Decor/assets/sprite-a6d3000c.svg#icon-x"></use>
+          </svg>
+        </button>
+        <ul class="mobile-menu__list">
+          <li>
+            <a class="mobile-menu__link" href="#hero-section">Home</a>
+          </li>
+          <li>
+            <a class="mobile-menu__link" href="#game-description-section"
+              >Game Description</a
+            >
+          </li>
+          <li>
+            <a class="mobile-menu__link" href="#reviews-section">Reviews</a>
+          </li>
+          <li>
+            <a class="mobile-menu__link" href="#how-to-play-section"
+              >How to Play</a
+            >
+          </li>
+          <li>
+            <a class="mobile-menu__link" href="">Features</a>
+          </li>
+          <li>
+            <a class="mobile-menu__link" href="">FAQ</a>
+          </li>
+          <li>
+            <a class="mobile-menu__link" href="">Gallery</a>
+          </li>
+        </ul>
+      </div>
+
+      <!-- Desktop version -->
+      <nav class="header__nav">
+        <div class="header__desktop-menu">
+          <ul class="header__menu">
+            <li class="header__menu-item">
+              <a class="header__menu-link" href="#hero-section">Home</a>
+            </li>
+            <li class="header__menu-item">
+              <a class="header__menu-link" href="#game-description-section"
+                >Game Description</a
+              >
+            </li>
+            <li class="header__menu-item">
+              <a class="header__menu-link" href="#reviews-section">Reviews</a>
+            </li>
+            <li class="header__menu-item">
+              <a class="header__menu-link" href="#how-to-play-section"
+                >How to Play</a
+              >
+            </li>
+            <li class="header__menu-item">
+              <a class="header__menu-link" href="">Features</a>
+            </li>
+            <li class="header__menu-item">
+              <a class="header__menu-link" href="">FAQ</a>
+            </li>
+            <li class="header__menu-item">
+              <a class="header__menu-link" href="">Gallery</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </div>
+  </div>
+</header>
 
 
     <main>
+      <section class="hero-section" id="hero-section">
+  <div class="container hero-section__container">
+    <div class="hero-section__image-container">
+      <picture>
+        <source
+          srcset="
+            ../img/hero/hero-mobile@2x.png 2x,
+            ../img/hero/hero-mobile.png    1x
+          "
+          media="(max-width: 1199px)"
+        />
+        <source
+          srcset="
+            ../img/hero/hero-desktop@2x.png 2x,
+            ../img/hero/hero-desktop.png    1x
+          "
+          media="(min-width: 1200px)"
+        />
+        <img
+          class="hero-section__image"
+          src="../img/hero/hero-mobile.png"
+          alt="Hero image"
+        />
+      </picture>
+    </div>
+    <div class="hero-section__content-container">
+      <div class="hero-section__title-container">
+        <h1 class="hero-section__title">Travel Decor</h1>
+        <svg class="hero-section__title-icon">
+          <use href="/Travel-Decor/assets/sprite-a6d3000c.svg#icon-paw-sharp"></use>
+        </svg>
+      </div>
+      <div class="hero-section__description-container">
+        <p class="hero-section__description">Match, Decorate, and Explore!</p>
+        <p class="hero-section__description">
+          Transform global spaces one puzzle at time!
+        </p>
+      </div>
+      <a
+        class="hero-section__link"
+        href="https://play.google.com/store/apps/details?id=com.dream.fun.free.traveldecor&pli=1"
+        target="_blank"
+      >
+        <img
+          class="hero-section__badge-icon"
+          src="../img/hero/badge.svg"
+          alt="Google Play"
+        />
+      </a>
+    </div>
+    <!-- Google play -->
+  </div>
+</section>
+
+      <section class="game-description-section" id="game-description-section">
+  <div class="container game-description-section__container">
+    <h2 class="game-description-section__title">Game Description</h2>
+    <div class="game-description-section__text-container">
+      <p class="game-description-section__text">
+        Travel Decor is a unique match-3 puzzle game where players combine their
+        love for puzzles with a passion for design and exploration.
+      </p>
+      <p class="game-description-section__text">
+        Travel across the globe, solve match-3 challenges, and unlock new design
+        opportunities for spaces inspired by famous cities.
+      </p>
+      <p class="game-description-section__text">
+        From cozy Parisian apartments to luxurious New York penthouses, express
+        your creativity while enjoying captivating gameplay.
+      </p>
+    </div>
+    <img
+      class="game-description-section__icon"
+      src="../img/description/dog.svg"
+      alt="Dog"
+    />
+  </div>
+</section>
+
       
-      
-      
-      
+      <section class="how-to-play-section" id="how-to-play-section">
+  <div class="container">
+    <h2 class="how-to-play-section__title">How to Play</h2>
+    <ol class="how-to-play-section__list">
+      <li class="how-to-play-section__item">
+        <span class="how-to-play-section__number">
+          <img
+            class="how-to-play-section__number-image"
+            src="../img/how-to-play/01.svg"
+            alt="number 01"
+          />
+        </span>
+        <p class="how-to-play-section__text">
+          Swap and match three or more tiles to clear them and earn points.
+        </p>
+        <span class="how-to-play-section__span-right">
+          <img
+            class="how-to-play-section__image"
+            src="../img/how-to-play/ball.svg"
+            alt="Ball"
+          />
+        </span>
+      </li>
+      <li class="how-to-play-section__item">
+        <span class="how-to-play-section__number">
+          <img
+            class="how-to-play-section__number-image"
+            src="../img/how-to-play/02.svg"
+            alt="number 02"
+          />
+        </span>
+        <p class="how-to-play-section__text">
+          Complete level objectives such as collecting design pieces or
+          achieving target scores.
+        </p>
+        <span class="how-to-play-section__span-left">
+          <img
+            class="how-to-play-section__image"
+            src="../img/how-to-play/potion.svg"
+            alt="Ball"
+          />
+        </span>
+      </li>
+      <li class="how-to-play-section__item">
+        <span class="how-to-play-section__number">
+          <img
+            class="how-to-play-section__number-image"
+            src="../img/how-to-play/03.svg"
+            alt="number 03"
+          />
+        </span>
+        <p class="how-to-play-section__text">
+          Earn rewards to unlock new rooms and decor items.
+        </p>
+        <span class="how-to-play-section__span-right">
+          <img
+            class="how-to-play-section__image"
+            src="../img/how-to-play/coin.svg"
+            alt="Coin"
+          />
+        </span>
+      </li>
+      <li class="how-to-play-section__item">
+        <span class="how-to-play-section__number">
+          <img
+            class="how-to-play-section__number-image"
+            src="../img/how-to-play/04.svg"
+            alt="number 04"
+          />
+        </span>
+        <p class="how-to-play-section__text">
+          Decorate each room to reflect iconic styles inspired by global
+          destinations.
+        </p>
+        <span class="how-to-play-section__span-left">
+          <img
+            class="how-to-play-section__image"
+            src="../img/how-to-play/paw.svg"
+            alt="Paw"
+          />
+        </span>
+      </li>
+      <li class="how-to-play-section__item">
+        <span class="how-to-play-section__number">
+          <img
+            class="how-to-play-section__number-image"
+            src="../img/how-to-play/05.svg"
+            alt="number 05"
+          />
+        </span>
+        <p class="how-to-play-section__text">
+          Take part in daily challenges for extra rewards and exclusive designs
+        </p>
+        <span class="how-to-play-section__span-last">
+          <img
+            class="how-to-play-section__image"
+            src="../img/how-to-play/paw.svg"
+            alt="Paw"
+          />
+        </span>
+      </li>
+    </ol>
+  </div>
+</section>
+
       <section class="features-section">
   <h2 class="features-title">Features</h2>
 
