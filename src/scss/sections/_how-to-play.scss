@@ -1,0 +1,135 @@
+.how-to-play-section {
+  padding-top: 24px;
+  padding-bottom: 24px;
+  background-color: $_peach_bg_color;
+
+  &__title {
+    text-align: center;
+    @include font(32, 48);
+    @include media(mobile) {
+      color: $_sin_text_color;
+      margin-bottom: 16px;
+    }
+    @include media(desktop) {
+      color: $_smalt_title_color;
+      margin-bottom: 24px;
+    }
+  }
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+    padding: 0;
+    list-style: none;
+
+    @include media(desktop) {
+      height: 488px;
+      flex-direction: row;
+      justify-content: center;
+      gap: 32px;
+      flex-wrap: wrap;
+    }
+  }
+
+  &__item {
+    position: relative;
+    width: 136px;
+    height: 160px;
+    padding-top: 24px;
+    padding-left: 6px;
+    padding-right: 6px;
+    border: none;
+    border-radius: 20px;
+    background-color: $_casablanca_color;
+
+    @include media(desktop) {
+      width: 190px;
+      height: 229px;
+      padding-top: 80px;
+      padding-left: 11px;
+      padding-right: 11px;
+    }
+
+    &:nth-child(odd) {
+      align-self: flex-start;
+
+      @include media(mobile) {
+        margin-right: auto;
+      }
+      @include media(desktop) {
+        margin-right: 0;
+        margin-top: 0; /* Елемент залишається зверху */
+        margin-bottom: auto;
+      }
+    }
+
+    &:nth-child(even) {
+      align-self: flex-end;
+
+      @include media(mobile) {
+        margin-left: auto;
+      }
+      @include media(desktop) {
+        margin-left: 0;
+        margin-top: auto;
+        margin-bottom: 0;
+      }
+    }
+  }
+
+  &__number {
+    position: absolute;
+    top: -12%;
+    left: 4%;
+  }
+  &__number-image {
+    @include media(desktop) {
+      width: 43px;
+      height: 85px;
+    }
+  }
+
+  &__text {
+    text-align: center;
+    color: $_white_color;
+    @include font(15, 22);
+  }
+
+  &__span-right {
+    position: absolute;
+    top: 33%;
+    left: 138%;
+    display: block;
+    width: 50px;
+    @include media(desktop) {
+      width: 100px;
+    }
+  }
+  &__span-left {
+    position: absolute;
+    top: 35%;
+    left: -88%;
+    display: block;
+    width: 50px;
+    @include media(desktop) {
+      width: 100px;
+    }
+  }
+  &__span-last {
+    position: absolute;
+    top: 33%;
+    left: 138%;
+    display: block;
+    width: 50px;
+    @include media(desktop) {
+      width: 100px;
+      top: 147%;
+      left: 29%;
+    }
+  }
+  &__image {
+    width: 100px;
+    height: 100px;
+  }
+}
