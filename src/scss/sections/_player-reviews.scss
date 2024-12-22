@@ -146,6 +146,7 @@
     pointer-events: none;
   }
 }
+
 .swiper-button-disabled {
   @include media(desktop) {
     opacity: 0.3;
