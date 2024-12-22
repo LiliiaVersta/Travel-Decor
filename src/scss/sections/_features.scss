@@ -33,21 +33,21 @@
     width: 246px;
     height: 232px;
     margin-bottom: 20px;
-    background-image: url('../../img/featuresBG.svg');
+    background-image: url('./../img/featuresBG.svg');
     background-repeat: no-repeat;
     background-size: contain;
 
     @include media(mobile) {
       &:nth-child(odd) {
         &::before {
-          background-image: url('../../img/smallgirl.png');
+          background-image: url('./../img/smallgirl.png');
         }
       }
       &:nth-child(even) {
         transform: scaleX(-1);
 
         &::after {
-          background-image: url('../../img/smallgod.png');
+          background-image: url('./../img/smallgod.png');
         }
 
         .feature-content {
@@ -80,13 +80,13 @@
 
       &:first-child {
         &::before {
-          background-image: url('../../img/smallgirl.png');
+          background-image: url('./../img/smallgirl.png');
         }
       }
 
       &:last-child {
         &::after {
-          background-image: url('../../img/smallgod.png');
+          background-image: url('./../img/smallgod.png');
         }
       }
     }
