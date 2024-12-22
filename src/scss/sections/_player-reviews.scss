@@ -149,7 +149,12 @@
 =======
 >>>>>>> 2187fff (added scroll and sticky header, fixed terms and reviews)
 }
-
+.swiper-button-disabled {
+  @include media(desktop) {
+    opacity: 0.3;
+    pointer-events: none;
+  }
+}
 .swiper-icon {
   @include media(desktop) {
     fill: $_sin_text_color;
