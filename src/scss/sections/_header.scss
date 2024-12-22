@@ -3,6 +3,7 @@
   z-index: 99;
   position: sticky;
   top: 0;
+<<<<<<< HEAD
   padding-top: 5px;
   padding-bottom: 5px;
   background-color: $_main_cobalt_color;
@@ -11,6 +12,9 @@
     padding-top: 7px;
     padding-bottom: 7px;
   }
+=======
+  background-color: $_main_cobalt_color;
+>>>>>>> 2187fff (added scroll and sticky header, fixed terms and reviews)
 
   &__container {
     display: flex;
