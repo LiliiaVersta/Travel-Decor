@@ -152,6 +152,7 @@
     pointer-events: none;
   }
 }
+
 .swiper-icon {
   @include media(desktop) {
     fill: $_sin_text_color;
