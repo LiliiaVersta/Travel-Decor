@@ -1,9 +1,6 @@
 .footer-section {
   background: var(--Peach, #ffe5b2); /* Бежевый фон всего футера */
   position: relative;
-
-  padding: 0 233px;
-
   /* Темно-синий полукруг */
   &::before {
     content: '';
@@ -22,14 +19,20 @@
     display: flex;
     flex-direction: column; /* Элементы друг под другом */
     align-items: center; /* Центровка по горизонтали */
-    gap: 20px; /* Расстояние между кнопкой и текстом */
     padding: 40px 20px;
+    gap: 15px;
+    max-width: 795px;
+    margin: 0 auto;
+
+    @include media(desktop) {
+      transform: translateX(15px);
+    }
 
     /* Кнопка Google Play */
     .google-play-link {
       img {
-        width: 299px; /* Ширина кнопки */
-        height: 86px; /* Высота кнопки */
+        width: 179px; /* Ширина кнопки */
+        height: 54px; /* Высота кнопки */
         display: block;
       }
     }
@@ -46,16 +49,10 @@
         .footer-link {
           color: var(--My-Sin, #ffb405); /* Желтый цвет ссылок */
           text-decoration: none;
-          font-size: 18px;
+          font-size: 14px;
           font-style: normal;
           font-weight: 600;
           line-height: 150%; /* 27px */
-          text-decoration-line: underline;
-          text-decoration-style: solid;
-          text-decoration-skip-ink: auto;
-          text-decoration-thickness: auto;
-          text-underline-offset: auto;
-          text-underline-position: from-font;
 
           &:hover {
             text-decoration: underline; /* Подчеркивание при наведении */
@@ -71,7 +68,7 @@
 
       .copyright {
         color: var(--My-Sin, #ffb405);
-        font-size: 18px; /* Размер копирайта */
+        font-size: 15px; /* Размер копирайта */
       }
     }
   }
@@ -103,10 +100,9 @@
       align-items: center;
 
       .google-play-link {
-        margin-bottom: 20px; /* Отступ под кнопкой */
         img {
-          width: 250px; /* Уменьшаем ширину кнопки */
-          height: auto;
+          width: 170px; /* Уменьшаем ширину кнопки */
+          height: 44px;
         }
       }
 

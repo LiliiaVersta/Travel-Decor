@@ -56,7 +56,6 @@
         font-weight: 700;
         color: var(--Meteorite, #45227e);
         text-align: left;
-        transition: background 0.3s ease;
 
         .icon-answer {
           width: 32px;
@@ -69,9 +68,7 @@
       }
 
       .ac-panel {
-        padding: 20px;
-        padding-left: 250px; /* Отступ слева */
-        padding-right: 250px; /* Отступ справа */
+        padding: 60px;
         font-family: 'Roboto', sans-serif;
         font-size: 18px;
         font-weight: 400;
@@ -87,9 +84,12 @@
   }
 
   /* Адаптивность */
-  @media (min-width: 1200px) {
-    padding-left: 250px; /* Отступ слева */
-    padding-right: 250px; /* Отступ справа */
+  @include media(desktop) {
+    padding: 0 60px;
+
+    padding-left: 170px; /* Отступ слева */
+    padding-right: 170px; /* Отступ справа */
+    padding-bottom: 80px;
 
     .faq-icons {
       gap: 40px; /* Больше расстояние между иконками */
@@ -120,18 +120,6 @@
     }
   }
 
-  @media (max-width: 768px) {
-    .accordion-container {
-      .faq-item {
-        .ac-trigger,
-        .ac-panel {
-          padding-left: 50px; /* Уменьшение отступов на планшетах */
-          padding-right: 50px;
-        }
-      }
-    }
-  }
-
   @media (max-width: 320px) {
     padding: 50px 10px;
 
@@ -143,6 +131,9 @@
       .faq-icon {
         width: 120px;
         height: 120px; /* Уменьшенные размеры иконок */
+      }
+      .faq-icon-none {
+        display: none;
       }
     }
 

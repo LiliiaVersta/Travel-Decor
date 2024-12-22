@@ -1,11 +1,7 @@
 .privacy-policy-section {
   background: var(--Peach, #ffe5b2);
-  padding: 40px 20px;
 
   .privacy-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
     margin-bottom: 40px;
 
     .privacy-logo {
@@ -33,6 +29,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    padding: 20px 10px;
 
     .privacy-title {
       font-family: 'Open Sans', sans-serif;
@@ -70,7 +67,7 @@
     }
 
     .privacy-section {
-      width: 100%;
+      // width: 100%;
       max-width: 800px;
       margin-bottom: 40px;
 
@@ -87,8 +84,6 @@
 
   /* Переломы */
   @media (min-width: 1200px) {
-    padding: 60px 40px;
-
     .privacy-header {
       .privacy-logo {
         width: 150px;
@@ -110,7 +105,7 @@
 
       p,
       ul {
-        font-size: 20px;
+        font-size: 18px;
         line-height: 150%; /* 30px */
       }
 
@@ -125,8 +120,6 @@
   }
 
   @media (max-width: 320px) {
-    padding: 20px 10px;
-
     .privacy-header {
       flex-direction: column;
       gap: 20px;
@@ -159,6 +152,137 @@
       .privacy-section {
         h2 {
           font-size: 24px;
+        }
+      }
+    }
+  }
+  .footer-section {
+    background: var(--Peach, #ffe5b2); /* Бежевый фон всего футера */
+    position: relative;
+    /* Темно-синий полукруг */
+    &::before {
+      content: '';
+      display: block;
+      background: var(--Cobalt, #21429f);
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 150px; /* Высота темно-синей части */
+      border-radius: 100% 100% 0 0; /* Полукруглый верх */
+    }
+
+    .footer-container {
+      position: relative; /* Для того чтобы контент оставался поверх псевдоэлемента */
+      display: flex;
+      flex-direction: column; /* Элементы друг под другом */
+      align-items: center; /* Центровка по горизонтали */
+      padding: 40px 20px;
+      gap: 15px;
+      max-width: 795px;
+      margin: 0 auto;
+
+      @include media(desktop) {
+        transform: translateX(15px);
+      }
+
+      /* Кнопка Google Play */
+      .google-play-link {
+        img {
+          width: 179px; /* Ширина кнопки */
+          height: 54px; /* Высота кнопки */
+          display: block;
+        }
+      }
+
+      /* Текстовые ссылки */
+      .footer-text {
+        font-family: Roboto;
+        text-align: center;
+
+        p {
+          font-family: Roboto;
+          margin: 0;
+          font-size: 14px; /* Размер текста */
+          line-height: 1.5;
+
+          .footer-link {
+            color: var(--My-Sin, #ffb405); /* Желтый цвет ссылок */
+            text-decoration: none;
+            font-size: 14px;
+            font-style: normal;
+            font-weight: 600;
+            line-height: 150%; /* 27px */
+
+            &:hover {
+              text-decoration: underline; /* Подчеркивание при наведении */
+            }
+          }
+
+          .divider {
+            color: var(--My-Sin, #ffb405);
+            height: 27px;
+            margin: 0 5px; /* Отступы для разделителя */
+          }
+        }
+
+        .copyright {
+          color: var(--My-Sin, #ffb405);
+          font-size: 15px; /* Размер копирайта */
+        }
+      }
+    }
+
+    /* Десктопная версия (ширина >= 1200px) */
+    @media (min-width: 1200px) {
+      .footer-container {
+        flex-direction: row; /* Горизонтальное расположение элементов */
+        justify-content: space-between; /* Распределение по краям */
+        align-items: center; /* Центровка по вертикали */
+
+        .google-play-link {
+          img {
+            width: 200px;
+            height: 86px; /* Оставляем фиксированные размеры */
+          }
+        }
+
+        .footer-text {
+          text-align: center; /* Текст выравнивается справа */
+        }
+      }
+    }
+
+    /* Мобильная версия (ширина <= 320px) */
+    @media (max-width: 320px) {
+      .footer-container {
+        flex-direction: column; /* Элементы друг под другом */
+        align-items: center;
+
+        .google-play-link {
+          img {
+            width: 170px; /* Уменьшаем ширину кнопки */
+            height: 44px;
+          }
+        }
+
+        .footer-text {
+          text-align: center;
+
+          p {
+            font-family: Roboto;
+            font-size: 12px; /* Уменьшенный текст */
+          }
+
+          .footer-link {
+            font-family: Roboto;
+            font-size: 10px;
+          }
+
+          .copyright {
+            font-family: Roboto;
+            font-size: 12px;
+          }
         }
       }
     }
