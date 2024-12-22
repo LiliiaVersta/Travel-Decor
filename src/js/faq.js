@@ -1,7 +1,7 @@
 import Accordion from 'accordion-js';
 import 'accordion-js/dist/accordion.min.css';
 
-const spriteUrl = '../img/icons.svg';
+const spriteUrl = './img/icons.svg';
 
 document.addEventListener('DOMContentLoaded', function () {
   new Accordion('.accordion-container', {

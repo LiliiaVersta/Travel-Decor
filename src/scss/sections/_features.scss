@@ -1,72 +1,3 @@
-// .features-section {
-//   padding: 50px 20px;
-//   background: var(--Cobalt, #21429f);
-
-//   .features-title {
-//     color: var(--My-Sin, #ffb405);
-//     font-family: 'Open Sans', sans-serif;
-//     font-size: 32px;
-//     font-style: normal;
-//     font-weight: 700;
-//     line-height: 150%; /* 48px */
-//     margin-top: 80px;
-//     text-align: center;
-//   }
-
-//   .feature-item {
-//     display: flex;
-//     align-items: center;
-//     // justify-content: center;
-//     // flex-direction: column;
-//     margin-bottom: 80px;
-//     position: relative;
-
-//     .feature-icon {
-//       width: 246px;
-//       height: 232px;
-//       margin-bottom: 20px;
-//       background-image: url('../../img/featuresBG.svg');
-//       &--mirror {
-//         transform: scaleX(-1);
-//       }
-//     }
-
-//     .image-girl {
-//       width: 153px;
-//       height: 156px;
-//       flex-shrink: 0;
-//     }
-
-//     .feature-content {
-//       text-align: center;
-//       &--mirror {
-//         transform: scaleX(-1);
-//       }
-
-//       .feature-heading {
-//         color: var(--Meteorite, #45227e);
-//         font-family: 'Open Sans', sans-serif;
-//         font-size: 20px;
-//         font-style: normal;
-//         font-weight: 700;
-//         line-height: 150%; /* 30px */
-//         margin-bottom: 10px;
-//         text-align: center;
-//       }
-
-//       .feature-description {
-//         color: var(--Cobalt, #21429f);
-
-//         font-family: 'Roboto', sans-serif;
-//         font-size: 18px;
-//         font-style: normal;
-//         font-weight: 400;
-//         line-height: 150%; /* 27px */
-//         text-align: center;
-//       }
-//     }
-//   }
-// }
 .features-section {
   padding: 50px 20px;
   background: var(--Cobalt, #21429f);
@@ -84,48 +15,107 @@
 
   /* Сетка для элементов */
   .features-grid {
-    display: grid;
-    grid-template-columns: repeat(
-      auto-fit,
-      minmax(300px, 1fr)
-    ); /* Автоматическое выравнивание */
+    display: flex;
     justify-content: center;
+    max-width: 1200px;
+    flex-wrap: wrap;
+    column-gap: 78px;
+    row-gap: 30px;
   }
 
   .feature-item {
     display: flex;
     flex-direction: column;
     align-items: center;
-    border-radius: 20px;
     padding: 20px;
     text-align: center;
     position: relative;
+    width: 246px;
+    height: 232px;
+    margin-bottom: 20px;
+    background-image: url('../../img/featuresBG.svg');
+    background-repeat: no-repeat;
+    background-size: contain;
 
-    .feature-icon {
-      width: 246px;
-      height: 232px;
-      margin-bottom: 20px;
-      background-image: url('../../img/featuresBG.svg');
-      background-repeat: no-repeat;
-      background-size: contain;
-      &--mirror {
+    @include media(mobile) {
+      &:nth-child(odd) {
+        &::before {
+          background-image: url('../../img/smallgirl.png');
+        }
+      }
+      &:nth-child(even) {
         transform: scaleX(-1);
+
+        &::after {
+          background-image: url('../../img/smallgod.png');
+        }
+
+        .feature-content {
+          transform: scaleX(-1);
+        }
       }
     }
 
-    .image-girl {
-      width: 153px;
-      height: 156px;
+    @include media(desktop) {
+      &:nth-child(n) {
+        transform: scaleX(1);
+
+        &::before,
+        &::after {
+          background-image: none;
+        }
+
+        .feature-content {
+          transform: scaleX(1);
+        }
+      }
+
+      &:nth-child(n + 4) {
+        transform: scaleX(-1);
+
+        .feature-content {
+          transform: scaleX(-1);
+        }
+      }
+
+      &:first-child {
+        &::before {
+          background-image: url('../../img/smallgirl.png');
+        }
+      }
+
+      &:last-child {
+        &::after {
+          background-image: url('../../img/smallgod.png');
+        }
+      }
+    }
+
+    &::before,
+    &::after {
+      position: absolute;
+      width: 80px;
+      height: 77px;
       flex-shrink: 0;
-      margin-top: -50px; /* Подтягиваем картинку ближе к элементу */
+      right: 80%;
+      top: 90%;
+      background-size: contain;
+      background-repeat: no-repeat;
+      content: '';
+
+      @include media(desktop) {
+        width: 153px;
+        height: 156px;
+      }
     }
 
     .feature-content {
       text-align: center;
-
-      &--mirror {
-        transform: scaleX(-1);
-      }
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 165px;
 
       .feature-heading {
         color: var(--Meteorite, #45227e);
@@ -134,7 +124,6 @@
         font-style: normal;
         font-weight: 700;
         line-height: 150%; /* 30px */
-        margin-bottom: 10px;
       }
 
       .feature-description {
