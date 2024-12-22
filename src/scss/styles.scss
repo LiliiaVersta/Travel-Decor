@@ -3,6 +3,10 @@
 @import './common/mixins';
 @import './common/breakpoints';
 
+@import 'swiper/scss';
+@import 'swiper/scss/navigation';
+@import 'swiper/scss/pagination';
+
 @import './base.scss';
 
 @import './sections/faq';
