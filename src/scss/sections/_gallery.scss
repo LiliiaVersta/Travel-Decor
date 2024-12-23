@@ -1,6 +1,6 @@
 .gallery-section {
   background: var(--Peach, #ffe5b2);
-  padding: 40px 20px;
+  padding: 60px 20px;
 
   .gallery-title {
     color: var(--Smalt, #12338d);
@@ -37,25 +37,24 @@
     margin-top: 20px;
 
     .pagination-button {
-      width: 32px;
-      height: 32px;
-      flex-shrink: 0;
-      border-radius: 50px;
-      background-color: #ffb405;
+      display: block;
+      width: 35px;
+      height: 35px;
+      position: absolute;
+      padding: 0;
+      background: none;
       border: none;
       display: flex;
       align-items: center;
       justify-content: center;
       cursor: pointer;
-
-      &:hover {
-        background-color: darken(#ffb405, 10%); /* Затемнение при наведении */
-      }
+      z-index: 10;
+      margin-bottom: 20px;
 
       .pagination-icon {
         width: 100%; /* Размер стрелки внутри */
         height: 100%;
-        fill: #ffffff; /* Цвет стрелки */
+        fill: #ffb405; /* Цвет стрелки */
       }
     }
   }
@@ -98,8 +97,8 @@
     }
 
     .pagination-button {
-      width: 28px;
-      height: 28px;
+      width: 30px;
+      height: 30px;
     }
 
     .pagination-icon {
