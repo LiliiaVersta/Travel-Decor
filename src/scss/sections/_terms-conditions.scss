@@ -81,17 +81,20 @@
   justify-content: center;
   padding-top: 16px;
   padding-bottom: 24px;
+  scroll-margin-top: 74px;
   background-color: $_peach_bg_color;
 
   @include media(desktop) {
     padding-top: 5px;
     padding-bottom: 80px;
+    scroll-margin-top: 91px;
   }
 
   &__link {
     display: inline-flex;
     align-items: center;
     gap: 16px;
+    margin-top: 16px;
     margin-bottom: 24px;
     color: $_smalt_title_color;
     @include font(14, 21);
