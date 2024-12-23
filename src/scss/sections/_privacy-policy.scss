@@ -1,57 +1,82 @@
-.privacy-policy-section {
+.terms-body {
+  background: var(--Peach, #ffe5b2); /* Общий фон */
+}
+
+/* Хедер */
+.privacy-header {
+  padding: 20px 0;
   background: var(--Peach, #ffe5b2);
 
-  .privacy-header {
-    margin-bottom: 40px;
+  .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 
-    .privacy-logo {
-      width: 120px;
-      height: 77px;
-    }
-
-    .privacy-back-link {
+    .header__container {
       display: flex;
       align-items: center;
-      gap: 16px;
+      gap: 20px;
+
+      .header__logo {
+        img {
+          width: 120px;
+          height: auto;
+        }
+      }
+    }
+  }
+}
+
+/* Основной контент */
+.privacy-content {
+  padding: 40px 20px;
+
+  .container {
+    text-align: center;
+    margin-bottom: 40px;
+
+    .terms-section__link {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
       font-family: 'Open Sans', sans-serif;
       font-size: 18px;
       font-weight: 700;
-      text-decoration: none;
       color: var(--Cobalt, #21429f);
+      text-decoration: none;
 
       &:hover {
         text-decoration: underline;
       }
+
+      .terms-section__icon {
+        width: 24px;
+        height: 24px;
+        fill: var(--Cobalt, #21429f);
+      }
     }
   }
 
-  .privacy-content {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 20px 10px;
+  .privacy-title {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 60px;
+    font-weight: 700;
+    color: var(--Smalt, #12338d);
+    line-height: 150%;
+    margin-bottom: 30px;
+  }
 
-    .privacy-title {
-      font-family: 'Open Sans', sans-serif;
-      font-size: 60px;
-      font-weight: 700;
-      color: var(--Smalt, #12338d);
-      line-height: 150%; /* 90px */
-      text-align: center;
-      margin-bottom: 30px;
-    }
-
-    p,
-    ul {
-      font-family: 'Roboto', sans-serif;
-      font-size: 18px;
-      font-weight: 400;
-      color: var(--Cobalt, #21429f);
-      line-height: 150%; /* 27px */
-      max-width: 683px;
-      text-align: left;
-      margin-bottom: 20px;
-    }
+  p,
+  ul {
+    font-family: 'Roboto', sans-serif;
+    font-size: 18px;
+    font-weight: 400;
+    color: var(--Cobalt, #21429f);
+    line-height: 150%; /* 27px */
+    max-width: 683px;
+    margin: 0 auto 20px auto;
+    text-align: left;
 
     ul {
       padding-left: 20px;
@@ -65,226 +90,75 @@
         }
       }
     }
+  }
 
-    .privacy-section {
-      // width: 100%;
-      max-width: 800px;
+  h2 {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 32px;
+    font-weight: 700;
+    color: var(--Smalt, #12338d);
+    line-height: 150%;
+    margin: 40px 0 20px;
+  }
+}
+
+/* Адаптивность */
+@media (min-width: 1200px) {
+  .container {
+    max-width: 1200px;
+    padding: 0 60px;
+  }
+  .privacy-header {
+    .header__logo img {
+      width: 150px;
+    }
+  }
+
+  .privacy-content {
+    padding: 60px 100px;
+
+    .privacy-title {
+      font-size: 72px;
+      line-height: 108px;
       margin-bottom: 40px;
+    }
 
-      h2 {
-        font-family: 'Open Sans', sans-serif;
-        font-size: 32px;
-        font-weight: 700;
-        color: var(--Smalt, #12338d);
-        line-height: 150%; /* 48px */
-        margin-bottom: 20px;
-      }
+    p,
+    ul {
+      font-size: 18px;
+      max-width: 900px;
+    }
+
+    h2 {
+      font-size: 36px;
+    }
+  }
+}
+
+@media (max-width: 320px) {
+  .privacy-header {
+    .header__logo img {
+      width: 100px;
     }
   }
 
-  /* Переломы */
-  @media (min-width: 1200px) {
-    .privacy-header {
-      .privacy-logo {
-        width: 150px;
-        height: 100px;
-      }
+  .privacy-content {
+    padding: 20px 10px;
 
-      .privacy-back-link {
-        font-size: 20px;
-        gap: 20px;
-      }
+    .privacy-title {
+      font-size: 36px;
+      line-height: 54px;
+      margin-bottom: 20px;
     }
 
-    .privacy-content {
-      .privacy-title {
-        font-size: 72px;
-        line-height: 108px;
-        margin-bottom: 40px;
-      }
-
-      p,
-      ul {
-        font-size: 18px;
-        line-height: 150%; /* 30px */
-      }
-
-      .privacy-section {
-        max-width: 900px;
-
-        h2 {
-          font-size: 36px;
-        }
-      }
-    }
-  }
-
-  @media (max-width: 320px) {
-    .privacy-header {
-      flex-direction: column;
-      gap: 20px;
-
-      .privacy-logo {
-        width: 100px;
-        height: 60px;
-      }
-
-      .privacy-back-link {
-        font-size: 16px;
-        gap: 10px;
-      }
+    p,
+    ul {
+      font-size: 16px;
+      max-width: 100%;
     }
 
-    .privacy-content {
-      .privacy-title {
-        font-size: 36px;
-        line-height: 54px;
-        margin-bottom: 20px;
-      }
-
-      p,
-      ul {
-        font-size: 16px;
-        max-width: 100%;
-        padding: 0 10px;
-      }
-
-      .privacy-section {
-        h2 {
-          font-size: 24px;
-        }
-      }
-    }
-  }
-  .footer-section {
-    background: var(--Peach, #ffe5b2); /* Бежевый фон всего футера */
-    position: relative;
-    /* Темно-синий полукруг */
-    &::before {
-      content: '';
-      display: block;
-      background: var(--Cobalt, #21429f);
-      position: absolute;
-      bottom: 0;
-      left: 0;
-      width: 100%;
-      height: 150px; /* Высота темно-синей части */
-      border-radius: 100% 100% 0 0; /* Полукруглый верх */
-    }
-
-    .footer-container {
-      position: relative; /* Для того чтобы контент оставался поверх псевдоэлемента */
-      display: flex;
-      flex-direction: column; /* Элементы друг под другом */
-      align-items: center; /* Центровка по горизонтали */
-      padding: 40px 20px;
-      gap: 15px;
-      max-width: 795px;
-      margin: 0 auto;
-
-      @include media(desktop) {
-        transform: translateX(15px);
-      }
-
-      /* Кнопка Google Play */
-      .google-play-link {
-        img {
-          width: 179px; /* Ширина кнопки */
-          height: 54px; /* Высота кнопки */
-          display: block;
-        }
-      }
-
-      /* Текстовые ссылки */
-      .footer-text {
-        font-family: Roboto;
-        text-align: center;
-
-        p {
-          font-family: Roboto;
-          margin: 0;
-          font-size: 14px; /* Размер текста */
-          line-height: 1.5;
-
-          .footer-link {
-            color: var(--My-Sin, #ffb405); /* Желтый цвет ссылок */
-            text-decoration: none;
-            font-size: 14px;
-            font-style: normal;
-            font-weight: 600;
-            line-height: 150%; /* 27px */
-
-            &:hover {
-              text-decoration: underline; /* Подчеркивание при наведении */
-            }
-          }
-
-          .divider {
-            color: var(--My-Sin, #ffb405);
-            height: 27px;
-            margin: 0 5px; /* Отступы для разделителя */
-          }
-        }
-
-        .copyright {
-          color: var(--My-Sin, #ffb405);
-          font-size: 15px; /* Размер копирайта */
-        }
-      }
-    }
-
-    /* Десктопная версия (ширина >= 1200px) */
-    @media (min-width: 1200px) {
-      .footer-container {
-        flex-direction: row; /* Горизонтальное расположение элементов */
-        justify-content: space-between; /* Распределение по краям */
-        align-items: center; /* Центровка по вертикали */
-
-        .google-play-link {
-          img {
-            width: 200px;
-            height: 86px; /* Оставляем фиксированные размеры */
-          }
-        }
-
-        .footer-text {
-          text-align: center; /* Текст выравнивается справа */
-        }
-      }
-    }
-
-    /* Мобильная версия (ширина <= 320px) */
-    @media (max-width: 320px) {
-      .footer-container {
-        flex-direction: column; /* Элементы друг под другом */
-        align-items: center;
-
-        .google-play-link {
-          img {
-            width: 170px; /* Уменьшаем ширину кнопки */
-            height: 44px;
-          }
-        }
-
-        .footer-text {
-          text-align: center;
-
-          p {
-            font-family: Roboto;
-            font-size: 12px; /* Уменьшенный текст */
-          }
-
-          .footer-link {
-            font-family: Roboto;
-            font-size: 10px;
-          }
-
-          .copyright {
-            font-family: Roboto;
-            font-size: 12px;
-          }
-        }
-      }
+    h2 {
+      font-size: 24px;
     }
   }
 }
