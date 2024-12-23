@@ -79,11 +79,13 @@
 .terms-section {
   display: flex;
   justify-content: center;
-<<<<<<< HEAD
+
   padding-top: 24px;
-=======
+
   padding-top: 16px;
->>>>>>> 2187fff (added scroll and sticky header, fixed terms and reviews)
+
+  padding-top: 24px;
+
   padding-bottom: 24px;
   scroll-margin-top: 74px;
   background-color: $_peach_bg_color;
@@ -99,10 +101,9 @@
     align-items: center;
     gap: 16px;
     margin-top: 16px;
-<<<<<<< HEAD
-=======
+
     margin-bottom: 24px;
->>>>>>> 72ea46b (fixed scroll)
+
     color: $_smalt_title_color;
     @include font(14, 21);
 
