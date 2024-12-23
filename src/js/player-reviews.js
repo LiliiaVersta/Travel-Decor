@@ -7,7 +7,6 @@ window.addEventListener('DOMContentLoaded', () => {
     slidesPerView: 1,
     spaceBetween: 16,
     centeredSlides: false,
-    loop: true,
     clickable: true,
 
     pagination: {

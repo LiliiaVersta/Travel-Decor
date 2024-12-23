@@ -1,5 +1,9 @@
 .terms-body {
-  background-color: #ffe5b2;
+  background-color: $_peach_bg_color;
+}
+
+.terms-header {
+  background-color: $_peach_bg_color;
 }
 
 .icon-term {
@@ -73,6 +77,8 @@
 }
 
 .terms-section {
+  display: flex;
+  justify-content: center;
   padding-top: 16px;
   padding-bottom: 24px;
   background-color: $_peach_bg_color;

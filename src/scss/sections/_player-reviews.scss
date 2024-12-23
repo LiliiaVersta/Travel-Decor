@@ -4,10 +4,10 @@
   background-size: 320px 297px;
   background-position: bottom;
   background-repeat: no-repeat;
-  background-image: url('../../img/reviews/city-mobile.png');
+  background-image: url('./../img/reviews/city-mobile.png');
 
   @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
-    background-image: url('../../img/reviews/city-mobile@2x.png');
+    background-image: url('./../img/reviews/city-mobile@2x.png');
   }
 
   @include media(desktop) {
@@ -15,10 +15,10 @@
     height: 434px;
     background-size: 377px 354px;
     background-position: left bottom;
-    background-image: url('../../img/reviews/city-desktop.png');
+    background-image: url('./../img/reviews/city-desktop.png');
 
     @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
-      background-image: url('../../img/reviews/city-desktop@2x.png');
+      background-image: url('./../img/reviews/city-desktop@2x.png');
     }
   }
 
@@ -109,33 +109,45 @@
 .swiper-button-prev,
 .swiper-button-next {
   display: none;
-  width: 30px;
-  height: 30px;
-  position: absolute;
-  padding: 0;
-  background: none;
-  border: none;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  cursor: pointer;
-  z-index: 10;
   @include media(desktop) {
     display: block;
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    padding: 0;
+    background: none;
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    z-index: 10;
   }
 }
 .swiper-button-prev {
-  left: -9%;
-  top: 50%;
-  transform: rotate(180deg);
+  @include media(desktop) {
+    left: -9%;
+    top: 50%;
+    transform: rotate(180deg);
+  }
 }
 
 .swiper-button-next {
-  left: 59%;
-  top: 50%;
+  @include media(desktop) {
+    left: 59%;
+    top: 50%;
+  }
+}
+.swiper-button-disabled {
+  @include media(desktop) {
+    opacity: 0.3;
+    pointer-events: none;
+  }
 }
 .swiper-icon {
-  fill: $_sin_text_color;
+  @include media(desktop) {
+    fill: $_sin_text_color;
+  }
 }
 
 .swiper-button-prev::after {
