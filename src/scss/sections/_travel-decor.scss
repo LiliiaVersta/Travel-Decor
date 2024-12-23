@@ -1,8 +1,10 @@
 .hero-section {
+  scroll-margin-top: 74px;
   padding-top: 16px;
   padding-bottom: 24px;
 
   @include media(desktop) {
+    scroll-margin-top: 91px;
     padding-top: 40px;
     padding-bottom: 80px;
   }

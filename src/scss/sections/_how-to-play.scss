@@ -1,7 +1,12 @@
 .how-to-play-section {
+  scroll-margin-top: 74px;
   padding-top: 24px;
   padding-bottom: 24px;
   background-color: $_peach_bg_color;
+
+  @include media(desktop) {
+    scroll-margin-top: 91px;
+  }
 
   &__title {
     text-align: center;
@@ -130,6 +135,5 @@
     }
   }
   &__image {
-
   }
 }
