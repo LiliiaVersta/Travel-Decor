@@ -18,93 +18,92 @@
 
     background-color: $_main_cobalt_color;
   }
-}
-
-&__container {
-  display: flex;
-  align-items: center;
-
-  @include media(mobile) {
-    justify-content: space-between;
-    gap: 8px;
-  }
-
-  @include media(desktop) {
-    position: sticky;
-    justify-content: start;
-    gap: 40px;
-  }
-}
-
-&__logo img {
-  width: 92px;
-  height: 64px;
-
-  @include media(desktop) {
-    width: 120px;
-    height: 77px;
-  }
-}
-
-&__burger {
-  @include media(mobile) {
-    width: 32px;
-    height: 32px;
-    padding: 0;
-    border: none;
-    background-color: transparent;
-    cursor: pointer;
-  }
-
-  &__icon {
-    fill: $_sin_text_color;
-  }
-
-  @include media(desktop) {
-    display: none;
-  }
-}
-
-&__nav {
-  @include media(mobile) {
-    display: none;
-  }
-}
-&__nav {
-  @include media(desktop) {
+  &__container {
     display: flex;
-  }
-}
+    align-items: center;
 
-&__menu {
-  @include media(mobile) {
-    display: none;
-  }
-
-  @include media(desktop) {
-    display: flex;
-    gap: 37px;
-  }
-}
-
-&__menu-link {
-  @include media(mobile) {
-    display: none;
-  }
-
-  @include media(desktop) {
-    display: block;
-    padding-top: 10px;
-    padding-bottom: 10px;
-    font-weight: 600;
-    color: $_sin_text_color;
-    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-
-    &:hover {
-      color: #db9c09;
+    @include media(mobile) {
+      justify-content: space-between;
+      gap: 8px;
     }
-    &:active {
-      color: $_white_color;
+
+    @include media(desktop) {
+      position: sticky;
+      justify-content: start;
+      gap: 40px;
+    }
+  }
+
+  &__logo img {
+    width: 92px;
+    height: 64px;
+
+    @include media(desktop) {
+      width: 120px;
+      height: 77px;
+    }
+  }
+
+  &__burger {
+    @include media(mobile) {
+      width: 32px;
+      height: 32px;
+      padding: 0;
+      border: none;
+      background-color: transparent;
+      cursor: pointer;
+    }
+
+    &__icon {
+      fill: $_sin_text_color;
+    }
+
+    @include media(desktop) {
+      display: none;
+    }
+  }
+
+  &__nav {
+    @include media(mobile) {
+      display: none;
+    }
+  }
+  &__nav {
+    @include media(desktop) {
+      display: flex;
+    }
+  }
+
+  &__menu {
+    @include media(mobile) {
+      display: none;
+    }
+
+    @include media(desktop) {
+      display: flex;
+      gap: 37px;
+    }
+  }
+
+  &__menu-link {
+    @include media(mobile) {
+      display: none;
+    }
+
+    @include media(desktop) {
+      display: block;
+      padding-top: 10px;
+      padding-bottom: 10px;
+      font-weight: 600;
+      color: $_sin_text_color;
+      transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+      &:hover {
+        color: #db9c09;
+      }
+      &:active {
+        color: $_white_color;
+      }
     }
   }
 }
