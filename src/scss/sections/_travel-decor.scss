@@ -2,6 +2,7 @@
   scroll-margin-top: 74px;
   padding-top: 16px;
   padding-bottom: 24px;
+  background-color: $_main_cobalt_color;
 
   @include media(desktop) {
     scroll-margin-top: 91px;

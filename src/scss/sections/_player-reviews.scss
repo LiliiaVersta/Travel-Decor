@@ -1,7 +1,9 @@
 .reviews-section {
+  position: relative;
   scroll-margin-top: 74px;
   padding-top: 24px;
   height: 580px;
+  background-color: $_main_cobalt_color;
   background-size: 320px 297px;
   background-position: bottom;
   background-repeat: no-repeat;
@@ -16,7 +18,7 @@
     padding-top: 80px;
     height: 434px;
     background-size: 377px 354px;
-    background-position: left bottom;
+    background-position: left calc((100% - 823px) / 2 + 60px) bottom;
     background-image: url('./../img/reviews/city-desktop.png');
 
     @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
