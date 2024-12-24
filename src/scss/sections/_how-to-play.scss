@@ -6,6 +6,8 @@
 
   @include media(desktop) {
     scroll-margin-top: 91px;
+    padding-top: 80px;
+    padding-bottom: 80px;
   }
 
   &__title {
@@ -64,7 +66,7 @@
       }
       @include media(desktop) {
         margin-right: 0;
-        margin-top: 0; /* Елемент залишається зверху */
+        margin-top: 0;
         margin-bottom: auto;
       }
     }
@@ -99,6 +101,11 @@
     text-align: center;
     color: $_white_color;
     @include font(15, 22);
+
+    @include media(desktop) {
+      color: $_smalt_title_color;
+      @include font(18, 27);
+    }
   }
 
   &__span-right {
@@ -135,5 +142,33 @@
     }
   }
   &__image {
+    @include media(desktop) {
+      width: 100px;
+      height: 100px;
+    }
+  }
+
+  &__span-paw {
+    position: absolute;
+    top: 35%;
+    left: -88%;
+    display: block;
+    width: 50px;
+    @include media(desktop) {
+      width: 100px;
+      left: -320%;
+    }
+  }
+
+  &__span-potion {
+    position: absolute;
+    top: 35%;
+    left: -88%;
+    display: block;
+    width: 50px;
+    @include media(desktop) {
+      width: 100px;
+      left: 144%;
+    }
   }
 }
