@@ -10,8 +10,9 @@
   @include media(desktop) {
     padding-top: 7px;
     padding-bottom: 7px;
-  }
 
+    background-color: $_main_cobalt_color;
+  }
   &__container {
     display: flex;
     align-items: center;
