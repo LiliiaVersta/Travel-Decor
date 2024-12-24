@@ -1,6 +1,8 @@
 .footer-section {
   background: var(--Peach, #ffe5b2); /* Бежевый фон всего футера */
   position: relative;
+  scroll-margin-top: 74px;
+
   /* Темно-синий полукруг */
   &::before {
     content: '';
@@ -75,6 +77,7 @@
 
   /* Десктопная версия (ширина >= 1200px) */
   @media (min-width: 1200px) {
+    scroll-margin-top: 91px;
     .footer-container {
       flex-direction: row; /* Горизонтальное расположение элементов */
       justify-content: space-between; /* Распределение по краям */

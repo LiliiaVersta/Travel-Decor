@@ -1,6 +1,7 @@
 .gallery-section {
   background: var(--Peach, #ffe5b2);
   padding: 60px 20px;
+  scroll-margin-top: 74px;
 
   .gallery-title {
     color: var(--Smalt, #12338d);
@@ -58,9 +59,12 @@
       }
     }
   }
-
+  .pagination-button-left {
+    transform: rotate(180deg);
+  }
   /* Адаптивность для десктопа (1200px) */
   @media (min-width: 1200px) {
+    scroll-margin-top: 91px;
     .gallery-container {
       gap: 30px; /* Увеличение расстояния между слайдами */
     }

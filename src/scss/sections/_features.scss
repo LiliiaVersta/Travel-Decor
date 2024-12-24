@@ -1,6 +1,7 @@
 .features-section {
   padding: 50px 20px;
   background: var(--Cobalt, #21429f);
+  scroll-margin-top: 74px;
 
   .features-title {
     color: var(--My-Sin, #ffb405);
@@ -57,6 +58,7 @@
     }
 
     @include media(desktop) {
+      scroll-margin-top: 91px;
       &:nth-child(n) {
         transform: scaleX(1);
 
