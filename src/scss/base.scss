@@ -4,7 +4,9 @@ body {
   color: $_peach_bg_color;
   font-style: normal;
   font-weight: 400;
-
+  p {
+    color: $_main_cobalt_color;
+  }
   @include media(mobile) {
     @include font(15, 22);
   }
