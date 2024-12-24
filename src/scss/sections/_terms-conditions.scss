@@ -79,7 +79,7 @@
 .terms-section {
   display: flex;
   justify-content: center;
-  padding-top: 16px;
+  padding-top: 24px;
   padding-bottom: 24px;
   scroll-margin-top: 74px;
   background-color: $_peach_bg_color;
@@ -95,12 +95,11 @@
     align-items: center;
     gap: 16px;
     margin-top: 16px;
-    margin-bottom: 24px;
     color: $_smalt_title_color;
     @include font(14, 21);
 
     @include media(desktop) {
-      margin-bottom: 34px;
+      margin-bottom: 24px;
     }
   }
 
@@ -121,7 +120,7 @@
 
   &__title {
     margin-bottom: 8px;
-    color: $_smalt_title_color;
+    color: $_main_cobalt_color;
 
     @include media(desktop) {
       margin-bottom: 16px;
@@ -130,7 +129,7 @@
 
   &__text {
     margin-bottom: 16px;
-    color: $_smalt_title_color;
+    color: $_main_cobalt_color;
 
     @include media(desktop) {
       margin-bottom: 24px;
@@ -142,9 +141,14 @@
     display: flex;
     flex-direction: column;
     gap: 0;
+    margin-bottom: 16px;
     list-style: inside;
   }
-  &__link {
+  &__item {
+    margin-left: 8px;
+  }
+
+  &__link-facebook {
     @include font(15, 22);
     text-decoration: underline;
 
@@ -157,7 +161,7 @@
 
   &__paragraph {
     margin-bottom: 8px;
-    color: $_smalt_title_color;
+    color: $_main_cobalt_color;
 
     @include media(desktop) {
       margin-bottom: 16px;
@@ -166,12 +170,14 @@
   }
 
   &__contact {
-    color: $_smalt_title_color;
+    color: $_main_cobalt_color;
     @include media(desktop) {
       width: 683px;
     }
   }
   .bold {
-    font-weight: 600;
+    @include media(desktop) {
+      font-weight: 600;
+    }
   }
 }
