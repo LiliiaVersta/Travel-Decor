@@ -36,12 +36,14 @@
     justify-content: center;
     gap: 15px; /* Расстояние между кнопками */
     margin-top: 20px;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    gap: 30px;
 
     .pagination-button {
-      display: block;
       width: 35px;
       height: 35px;
-      position: absolute;
       padding: 0;
       background: none;
       border: none;
@@ -50,7 +52,6 @@
       justify-content: center;
       cursor: pointer;
       z-index: 10;
-      margin-bottom: 20px;
 
       .pagination-icon {
         width: 100%; /* Размер стрелки внутри */
