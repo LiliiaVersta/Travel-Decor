@@ -79,13 +79,7 @@
 .terms-section {
   display: flex;
   justify-content: center;
-
   padding-top: 24px;
-
-  padding-top: 16px;
-
-  padding-top: 24px;
-
   padding-bottom: 24px;
   scroll-margin-top: 74px;
   background-color: $_peach_bg_color;
@@ -100,10 +94,8 @@
     display: inline-flex;
     align-items: center;
     gap: 16px;
-    margin-top: 16px;
-
+    margin-top: 12px;
     margin-bottom: 24px;
-
     color: $_smalt_title_color;
     @include font(14, 21);
 
@@ -129,7 +121,7 @@
 
   &__title {
     margin-bottom: 8px;
-    color: $_main_cobalt_color;
+    color: $_smalt_title_color;
 
     @include media(desktop) {
       margin-bottom: 16px;
@@ -152,6 +144,7 @@
     gap: 0;
     margin-bottom: 16px;
     list-style: inside;
+    color: $_main_cobalt_color;
   }
   &__item {
     margin-left: 8px;
@@ -160,6 +153,7 @@
   &__link-facebook {
     @include font(15, 22);
     text-decoration: underline;
+    color: $_main_cobalt_color;
 
     @include media(desktop) {
       @include font(18, 27);
@@ -187,6 +181,7 @@
   .bold {
     @include media(desktop) {
       font-weight: 600;
+      color: $_main_cobalt_color;
     }
   }
 }

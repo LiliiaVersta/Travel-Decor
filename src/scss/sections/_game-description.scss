@@ -20,6 +20,7 @@
 
   &__title {
     text-align: center;
+    color: $_smalt_title_color;
     @include media(desktop) {
       margin-bottom: 33px;
     }
